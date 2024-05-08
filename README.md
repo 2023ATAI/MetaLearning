@@ -15,6 +15,7 @@ Our work is conducted on LandBench 1.0.
 - matplotlib 3.5.2
 - xarray 2023.1.0
 - netCDF4 1.6.2
+- learn2learn 0.1.7
 
 
 The latest  can work in 
@@ -42,10 +43,9 @@ linux-Ubuntu 18.04.6
 |----|----|----|---- 2020
 |----|----|----land_surface
 |----|----|----|----1979
-|----|----|----|----|----volumetric_soil_water_layer_1.nc
 |----|----|----|----|----surface_theraml_radiation_downwards_w_m2.nc
 |----|----|----|----|----surface_solar_radiation_downwards_w_m2.nc
-|----|----|----|----|----soil_temperature_level_1.nc
+|----|----|----|----|----soil_temperature_level_2.nc
 |----|----|----|----1980
 ...
 ...
@@ -54,9 +54,9 @@ linux-Ubuntu 18.04.6
 |----|----|----|----clay_0-5cm_mean.nc
 |----|----|----|----sand_0-5cm_mean.nc
 |----|----|----|----silt_0-5cm_mean.nc
-|----|----|----|----silt_15-30cm_mean.nc
 |----|----|----|----landtype.nc
 |----|----|----|----soil_water_capacity.nc
+|----|----|----|----dem.nc
 ```
 
 ### Prepare Config File
@@ -65,7 +65,7 @@ The config file of our work is `MetaLearning/src/config.py`
 
 ### Process data and train model
 
-Run the following command in the directory of `MetaLearning.0/src/` to process data and start training.
+Run the following command in the directory of `MetaLearning/src/` to process data and start training.
 
 ```
 python main.py 
@@ -73,7 +73,7 @@ python main.py
 
 ### Detailed analyzing
 
-Run the following command in the directory of `MetaLearning.0/src/` to get detailed analyzing.
+Run the following command in the directory of `MetaLearning/src/` to get detailed analyzing.
 
 ```
 python postprocess.py 
